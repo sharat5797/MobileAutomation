@@ -47,7 +47,7 @@ public class ClientSignupTests {
 //        } catch (MalformedURLException e) {
 //            System.out.println("The URL provided for the Appium server is not well formatted.");
 //        }
-        mobileDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        mobileDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             LauncherScreen launcherScreen = new LauncherScreen(mobileDriver); // Assume mobileDriver is created and handy.
         launcherScreen.navToClientSignup();
         User client = new User("randomclient@gmail.com",
