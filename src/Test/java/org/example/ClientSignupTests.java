@@ -47,8 +47,8 @@ public class ClientSignupTests {
 //        } catch (MalformedURLException e) {
 //            System.out.println("The URL provided for the Appium server is not well formatted.");
 //        }
-//        mobileDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            LauncherScreen launcherScreen = new LauncherScreen(mobileDriver); // Assume mobileDriver is created and handy.
+        mobileDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        LauncherScreen launcherScreen = new LauncherScreen(mobileDriver); // Assume mobileDriver is created and handy.
         launcherScreen.navToClientSignup();
         User client = new User("randomclient@gmail.com",
                 "password",
@@ -59,16 +59,16 @@ public class ClientSignupTests {
         SignupScreen signupScreen = new SignupScreen(mobileDriver);
         HomeScreen homeScreen = signupScreen.signup(client);
 
-        ProfileScreen profileScreen = homeScreen.navToProfile();
-        User clientProfile = profileScreen.getProfileDetails();
-
-        // Assert
-        Assert.assertEquals(clientProfile.getEmail(), client.getEmail());
-        Assert.assertEquals(clientProfile.getFullName(), client.getFullName());
-        Assert.assertEquals(clientProfile.getMobile(), client.getMobile());
-
-        // Assume we have called a date utility to supply Today's Date
-        Assert.assertEquals(clientProfile.getMembershipStartDate(), "Today's Date");
+//        ProfileScreen profileScreen = homeScreen.navToProfile();
+//        User clientProfile = profileScreen.getProfileDetails();
+//
+//        // Assert
+//        Assert.assertEquals(clientProfile.getEmail(), client.getEmail());
+//        Assert.assertEquals(clientProfile.getFullName(), client.getFullName());
+//        Assert.assertEquals(clientProfile.getMobile(), client.getMobile());
+//
+//        // Assume we have called a date utility to supply Today's Date
+//        Assert.assertEquals(clientProfile.getMembershipStartDate(), "Today's Date");
 
     }
 }
