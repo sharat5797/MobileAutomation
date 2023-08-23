@@ -17,9 +17,7 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.1'
 }
 
-test {
-    useTestNG()
-}
+
 task runMobileTests(type: Test) {
     outputs.upToDateWhen { false }
     useTestNG {
@@ -28,7 +26,14 @@ task runMobileTests(type: Test) {
         outputDirectory = file("$buildDir/mobile-reports")
     }
 }
+test {
+    // Use TestNG for unit tests
+    useTestNG()
+}
 
 tasks.withType(Test) {
     systemProperties System.properties
 }
+
+
+
