@@ -58,7 +58,7 @@ public class ClientSignupTests {
         //Act
         SignupScreen signupScreen = new SignupScreen(mobileDriver);
         HomeScreen homeScreen = signupScreen.signup(client);
-
+        System.out.println("hello");
 //        ProfileScreen profileScreen = homeScreen.navToProfile();
 //        User clientProfile = profileScreen.getProfileDetails();
 //
