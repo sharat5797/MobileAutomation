@@ -20,3 +20,15 @@ dependencies {
 test {
     useTestNG()
 }
+task runMobileTests(type: Test) {
+    outputs.upToDateWhen { false }
+    useTestNG {
+        testLogging.showStandardStreams = true
+        useDefaultListeners true
+        outputDirectory = file("$buildDir/mobile-reports")
+    }
+}
+
+tasks.withType(Test) {
+    systemProperties System.properties
+}
