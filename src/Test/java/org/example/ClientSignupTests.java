@@ -59,6 +59,7 @@ public class ClientSignupTests {
         SignupScreen signupScreen = new SignupScreen(mobileDriver);
         HomeScreen homeScreen = signupScreen.signup(client);
         System.out.println("hello");
+        System.out.println("new workflow");
 //        ProfileScreen profileScreen = homeScreen.navToProfile();
 //        User clientProfile = profileScreen.getProfileDetails();
 //
